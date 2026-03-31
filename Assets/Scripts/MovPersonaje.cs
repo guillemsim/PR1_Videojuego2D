@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 public class MovPersonaje : MonoBehaviour
 {
 
-    public float velocidad = 0.5f;
+    public float velocidad = 0.05f;
     public float impulsoDeSalto = 5.0f;
 
     Rigidbody2D rb;
+    bool puedoSaltar = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,16 +37,28 @@ public class MovPersonaje : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = false;
         }
 
+        //Raycasting
+        RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector2.down,0.5f);
+        
+        if(hit.collider == true)
+        {
+            puedoSaltar = true;
+        }
+        else
+        {
+            puedoSaltar = false;
+        
+        }
+        Debug.Log(hit.collider.name);
         //Salto
-
         bool salto = InputSystem.actions["Jump"].WasPressedThisFrame();
 
-        if(salto == true)
+        if(salto == true && puedoSaltar == true)
         {
             rb.AddForce(transform.up*impulsoDeSalto,ForceMode2D.Impulse);
 
-        }
 
+        }
 
     }
 }

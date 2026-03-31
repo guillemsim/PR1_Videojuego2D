@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4581ed73cc6ad9c48b467ddff7039ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovPersonaje
-  velocidad: 0.01
+  velocidad: 0.08
   impulsoDeSalto: 5
 --- !u!1 &822553344
 GameObject:
