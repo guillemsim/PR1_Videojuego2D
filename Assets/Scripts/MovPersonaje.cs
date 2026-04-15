@@ -24,7 +24,6 @@ public class MovPersonaje : MonoBehaviour
     {
         //Move
         Vector2 moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
-
         this.transform.Translate(moveInput.x*velocidad, moveInput.y, 0);
 
         //Flip
@@ -59,6 +58,8 @@ public class MovPersonaje : MonoBehaviour
 
 
         }
+
+
 
     }
 }
