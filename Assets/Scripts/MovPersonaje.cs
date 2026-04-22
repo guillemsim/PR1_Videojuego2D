@@ -59,7 +59,10 @@ public class MovPersonaje : MonoBehaviour
 
         }
 
-
-
+    }
+       public void Muerte()
+   {
+      GameManager.vidas -= 1;
+//      transform.position = respawn.transform.position;
     }
 }
