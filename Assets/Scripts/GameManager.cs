@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 
-
 public class GameManager : MonoBehaviour
 {
     public static int vidas = 3;
@@ -10,14 +9,12 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-      //  vidasObjeto = GameObject.Find("vidasObj");
+        //      vidasObjeto = GameObject.Find("vidasObjeto");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    //    vidasObjeto.GetComponent<TextMeshProUGUI>().text = vidas.ToString();
-
+        //      vidasObjeto.GetComponent<TextMeshProUGUI>().text = vidas.ToString();
     }
 }

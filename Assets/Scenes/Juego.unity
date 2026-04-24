@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 491528596}
   - component: {fileID: 491528598}
   - component: {fileID: 491528597}
+  - component: {fileID: 491528599}
   m_Layer: 5
   m_Name: vidasObjeto
   m_TagString: Untagged
@@ -335,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -660.2201, y: 427}
+  m_AnchoredPosition: {x: -650, y: 427}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &491528597
@@ -438,6 +439,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491528595}
   m_CullTransparentMesh: 1
+--- !u!114 &491528599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491528595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6a80c74c6e6064c9229573bac57374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1259,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.52, y: 0.58}
+  m_Size: {x: 0.4, y: 0.6}
   m_Direction: 0
 --- !u!50 &812842750
 Rigidbody2D:
@@ -1263,7 +1276,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1273,7 +1286,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &812842751
 Animator:
@@ -1365,8 +1378,8 @@ Transform:
   m_GameObject: {fileID: 812842748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45, y: -2.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.46, y: -2.123, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1453829384}
@@ -1396,7 +1409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4581ed73cc6ad9c48b467ddff7039ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovPersonaje
-  velocidad: 0.01
+  velocidad: 0.02
   impulsoDeSalto: 5
 --- !u!1 &822553344
 GameObject:
