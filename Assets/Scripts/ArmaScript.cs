@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class ArmaScript : MonoBehaviour
 {
 
-    public GameObject bala;
+    public GameObject balaPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +20,7 @@ public class ArmaScript : MonoBehaviour
 
     if (disparo)
     {
-        Instantiate(bala, transform.position, Quaternion.identity);
+        Instantiate(balaPrefab, transform.position, Quaternion.identity);
     }
 
     }

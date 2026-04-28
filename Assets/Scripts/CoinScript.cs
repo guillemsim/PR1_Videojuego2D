@@ -20,6 +20,7 @@ public class CoinScript : MonoBehaviour
         if(col.gameObject.name == "Personaje")
         {
         gameObject.GetComponent<Animator>().SetBool("obtenerCoin", true);
+        GameManager.puntos = GameManager.puntos + 1;
         Destroy(this.gameObject, 3.0f);
         }
     }
