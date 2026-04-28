@@ -16,10 +16,10 @@ public class Bala : MonoBehaviour
     {
 
         //Movimiento de la bala
-        transform.Translate(0.01f * MovPersonaje.direccion, 0, 0);
+        transform.Translate(0.05f * MovPersonaje.direccion, 0, 0);
 
         //tiempo de vida de la bala
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 1.0f);
     }
 
     

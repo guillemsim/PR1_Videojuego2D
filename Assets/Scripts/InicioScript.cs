@@ -12,6 +12,5 @@ public class InicioScript : MonoBehaviour
     public void ExitJuego()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

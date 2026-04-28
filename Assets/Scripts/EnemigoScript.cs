@@ -18,7 +18,7 @@ public class EnemigoScript : MonoBehaviour
          //Marranería
         if(InputSystem.actions["Crouch"].WasPressedThisFrame())
         {
-            Destroy(this.gameObject, 1.0f);
+            Destroy(this.gameObject, 0.5f);
             Debug.Log("Enemigo destruido");
             animator.SetBool("destruirEnemigo", true);
             LlaveScript.enemigoMuerto = true;
@@ -36,7 +36,7 @@ public class EnemigoScript : MonoBehaviour
         //Destruir enemigo
         if(col.gameObject.name == "bala(Clone)" || col.gameObject.name == "bala" || col.gameObject.name == "balaPrefab")
         {
-            Destroy(this.gameObject, 1.0f);
+            Destroy(this.gameObject, 0.5f);
             Debug.Log("Enemigo destruido");
             animator.SetBool("destruirEnemigo", true);
         }
