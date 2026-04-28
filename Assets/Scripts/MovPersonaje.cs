@@ -3,16 +3,23 @@ using UnityEngine.InputSystem;
 
 public class MovPersonaje : MonoBehaviour
 {
-    public float velocidad = 0.05f;
     public float impulsoDeSalto = 5.0f;
-
-    Rigidbody2D rb;
+    public float velocidad = 0.05f;
+    Animator animator;
     bool puedoSaltar = false;
+    Rigidbody2D rb;
+
+    public void Muerte()
+    {
+        GameManager.vidas -= 1;
+        //      transform.position = respawn.transform.position;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,7 +29,19 @@ public class MovPersonaje : MonoBehaviour
         Vector2 moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
         this.transform.Translate(moveInput.x * velocidad, 0, 0);
 
-        //Flip
+        //Animacion Mov
+        if (moveInput.x != 0)
+        {
+            animator.SetBool("estaMoviendo", true);
+            Debug.Log("True");
+        }
+        else
+        {
+            animator.SetBool("estaMoviendo", false);
+            Debug.Log("False");
+        }
+
+        //Flip del personaje
         if (moveInput.x < 0)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
@@ -43,7 +62,8 @@ public class MovPersonaje : MonoBehaviour
         {
             puedoSaltar = false;
         }
-        Debug.Log(hit.collider.name);
+
+
         //Salto
         bool salto = InputSystem.actions["Jump"].WasPressedThisFrame();
 
@@ -51,11 +71,5 @@ public class MovPersonaje : MonoBehaviour
         {
             rb.AddForce(transform.up * impulsoDeSalto, ForceMode2D.Impulse);
         }
-    }
-
-    public void Muerte()
-    {
-        GameManager.vidas -= 1;
-        //      transform.position = respawn.transform.position;
     }
 }

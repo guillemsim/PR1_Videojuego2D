@@ -187,8 +187,8 @@ Canvas:
   m_GameObject: {fileID: 44930144}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -910,7 +910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce85403e824f8d4abb88c2a32a443f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  clipMenu: {fileID: 8300000, guid: cc20b242a9c8da541961b9ebd8546a67, type: 3}
+  bandaSonora: {fileID: 0}
+  monedas: {fileID: 0}
+  AudioManagerObj: {fileID: 0}
 --- !u!82 &1946863319
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1131,6 +1133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37079151054b99428c7535424ebd360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InicioScript
+  panelInicio: {fileID: 0}
+  panelSettings: {fileID: 0}
+  AudioManagerObj: {fileID: 0}
 --- !u!4 &2123381553
 Transform:
   m_ObjectHideFlags: 0
